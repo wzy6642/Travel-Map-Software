@@ -39,7 +39,7 @@ if _3D:
 
 ## 在地图上添加点以及绘制线路图
 for sub_data in gps_info:
-    marker = folium.Marker(location=[sub_data[1], sub_data[2]], tooltip=sub_data[0])
+    marker = folium.Marker(location=[sub_data[1], sub_data[2]], tooltip=sub_data[0], popup=f'<div style="width:150px;height:45px;">时间: {sub_data[0]}<br>纬度: {sub_data[1]}<br>经度: {sub_data[2]}</div>')
     marker.add_to(map)
 
 route = PolyLine(
